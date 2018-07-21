@@ -1,0 +1,21 @@
+int step = 5;
+int[] pi = IntStream.iterate(0,x->x<255,x->x+step).toArray();
+int[] ni = IntStream.iterate(255,x->x>0,x->x-step).toArray();
+
+System.out.println("Saw tooth value: ");
+Arrays.stream(pi).forEach(x->{System.out.print(x + " ");});
+Arrays.stream(pi).forEach(x->{System.out.print(x + " ");});
+System.out.println("\n" + (pi.length<<1));
+
+System.out.println("Triangular value: ");
+Arrays.stream(pi).forEach(x->{System.out.print(x + " ");});
+Arrays.stream(ni).forEach(x->{System.out.print(x + " ");});
+System.out.println("\n" + (pi.length+ni.length));
+
+System.out.println("Sine value: ");
+var su = Arrays.stream(ni).map(x->-x).asDoubleStream().map(x->x*Math.PI/255.).map(x->Math.cos(x)).map(x->(x+1.)*255./2.);
+var sd = Arrays.stream(pi).asDoubleStream().map(x->x*Math.PI/255.).map(x->Math.cos(x)).map(x->(x+1.)*255./2.);
+su.forEach(x->{System.out.print(Math.round(x) + " ");});
+sd.forEach(x->{System.out.print(Math.round(x) + " ");});
+System.out.println("\n" + (pi.length+ni.length));
+/exit
