@@ -8,7 +8,7 @@
 
 使用的D/A转换器为DAC0832
 
-正弦波、三角波、锯齿波的波形就可以通过`SinValue.jshell`脚本来生成。该脚本为jshell脚本，要运行需9及之后Java SE版本，使用其中的jshell工具执行。
+正弦波、三角波、锯齿波的波形就可以通过`SinValue.jshell`脚本来生成。该脚本为jshell脚本，要运行需10及之后Java SE版本，使用其中的jshell工具执行。
 
 ## 实验二 D/A与A/D转换
 
